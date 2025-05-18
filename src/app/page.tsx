@@ -8,7 +8,8 @@ import { TopContributors } from "@/components/top-contributors";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen relative bg-white">
+      <div className="absolute -top-16 right-0 w-32 h-32 bg-green-100 rounded-full opacity-50" />
       <Header />
       <Hero />
       <div className="container mx-auto px-4 py-16">

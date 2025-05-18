@@ -29,8 +29,6 @@ export function TopContributors() {
 
   return (
     <Card className="border-none shadow-xl bg-gradient-to-br from-white to-green-50 overflow-hidden animate-slideUp">
-      <div className="absolute top-0 right-0 w-32 h-32 bg-green-100 rounded-full translate-x-16 -translate-y-16 opacity-50" />
-
       <CardHeader className="pb-2 relative z-10">
         <CardTitle className="flex items-center gap-2 text-2xl text-gray-800 font-display">
           <Trophy className="text-yellow-500" />
