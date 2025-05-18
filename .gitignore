@@ -36,3 +36,4 @@ example-collection/
 
 .next
 public/*.js*
+.vercel

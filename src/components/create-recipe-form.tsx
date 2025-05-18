@@ -50,12 +50,20 @@ export function CreateRecipeForm() {
         body: formData,
       })
 
-      if (!response.ok) {
-        const error = await response.json()
-        throw new Error(error.message || 'Failed to upload image')
+      const responseText = await response.text()
+      let data
+
+      try {
+        data = JSON.parse(responseText)
+        
+        if (!response.ok) {
+          throw new Error(data.error || data.details || 'Failed to upload image')
+        }
+      } catch (parseError) {
+        console.error('Error parsing response:', responseText)
+        throw new Error(`Invalid response from server: ${!responseText ? 'Empty response' : 'Invalid JSON'}`)
       }
 
-      const data = await response.json()
       setFormData((prev) => ({ ...prev, imageUrl: data.url }))
       toast({
         title: "Image uploaded successfully!",
@@ -65,15 +73,14 @@ export function CreateRecipeForm() {
       console.error('Error uploading image:', error)
       toast({
         title: "Failed to upload image",
-        description: "Please try again or use a different image",
+        description: typeof error === 'object' && error !== null ? (error as Error).message : "Please try again or use a different image",
         variant: "destructive",
       })
     } finally {
       setIsUploading(false)
     }
   }
-  // Handle image upload functions
-  // Handle file input change
+
   const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (!file) return
