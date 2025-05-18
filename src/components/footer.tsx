@@ -59,19 +59,19 @@ export function Footer() {
             <h3 className="font-display text-lg font-bold mb-4">Connect</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-green-100 hover:text-white transition-colors flex items-center gap-2">
+                <Link href="https://github.com/EverythingSuckz/secret-sips" className="text-green-100 hover:text-white transition-colors flex items-center gap-2">
                   <Github className="h-4 w-4" />
                   GitHub
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-green-100 hover:text-white transition-colors flex items-center gap-2">
+                <Link href="https://twitter.com/JyothisJayanth" className="text-green-100 hover:text-white transition-colors flex items-center gap-2">
                   <Twitter className="h-4 w-4" />
                   Twitter
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-green-100 hover:text-white transition-colors flex items-center gap-2">
+                <Link href="https://github.com/sponsors/EverythingSuckz" className="text-green-100 hover:text-white transition-colors flex items-center gap-2">
                   <Heart className="h-4 w-4" />
                   Support
                 </Link>
