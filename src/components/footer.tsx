@@ -15,7 +15,7 @@ export function Footer() {
               Share your secret Starbucks recipes with the community and get recognized when others upvote your
               creations.
             </p>
-            <div className="flex items-center">
+            <div className="flex items-start flex-col gap-4">
               <span className="text-green-200 mr-3">Powered by</span>
               <Link href="https://aptosfoundation.org" target="_blank" rel="noopener noreferrer">
                 <Image
@@ -56,7 +56,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-display text-lg font-bold mb-4">Connect</h3>
+            <h3 className="font-display text-lg font-bold mb-4">External</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="https://github.com/EverythingSuckz/secret-sips" className="text-green-100 hover:text-white transition-colors flex items-center gap-2">
