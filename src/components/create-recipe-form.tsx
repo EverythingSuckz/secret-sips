@@ -304,7 +304,9 @@ export function CreateRecipeForm() {
             ) : previewImage ? (
               // Image Preview
               <div className="relative mt-2 rounded-lg overflow-hidden border border-gray-200">
-                <Image 
+                <Image
+                  width={500}
+                  height={300}
                   src={previewImage} 
                   alt="Preview" 
                   className="w-full h-64 object-cover" 

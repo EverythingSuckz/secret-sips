@@ -51,6 +51,8 @@ export function RecipeCard({ post, onUpvote, isOwner, isUpvoted, onRedeem }: Rec
       <div className="relative overflow-hidden h-48">
         {post.image_url ? (
           <Image
+            width={500}
+            height={200}
             src={post.image_url}
             alt={post.title}
             className="object-cover h-full w-full recipe-card-image"
