@@ -1,40 +1,86 @@
-## Create Aptos Dapp Boilerplate Template
+# SecretSips - Social Recipe Sharing for Starbucks Enthusiasts
 
-The Boilerplate template provides a starter dapp with all necessary dapp infrastructure and a simple wallet info implementation, transfer APT and a simple message board functionality to send and read a message on chain.
+SecretSips is a decentralized social platform built on Aptos blockchain where Starbucks enthusiasts can share and discover custom drink recipes, get rewarded for their creativity, and build a community around their favorite coffee customizations.
 
-## Read the Boilerplate template docs
-To get started with the Boilerplate template and learn more about the template functionality and usage, head over to the [Boilerplate template docs](https://learn.aptoslabs.com/en/dapp-templates/boilerplate-template) 
+## 🎥 Demo Video
 
+<video width="640" height="360" controls>
+  <source src="secret_sips.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-## The Boilerplate template provides:
+## 🌟 Features
 
-- **Folder structure** - A pre-made dapp folder structure with a `src` (frontend) and `contract` folders.
-- **Dapp infrastructure** - All required dependencies a dapp needs to start building on the Aptos network.
-- **Wallet Info implementation** - Pre-made `WalletInfo` components to demonstrate how one can use to read a connected Wallet info.
-- **Transfer APT implementation** - Pre-made `transfer` components to send APT to an address.
-- **Message board functionality implementation** - Pre-made `message` components to send and read a message on chain
+- **Share Custom Recipes**: Create and share your unique Starbucks drink recipes with the community
+- **Earn Rewards**: Get rewarded in APT tokens when others like your recipes
+- **Leaderboard System**: Top recipes rise to the leaderboard, creating healthy competition
+- **Decentralized Ownership**: All content is stored on the Aptos blockchain, ensuring censorship resistance
+- **Mobile Responsive Design**: Optimized user experience across all devices
+- **Web3 Wallet Integration**: Connect with popular Aptos-compatible wallets
 
+## 🚀 How It Works
 
-## What tools the template uses?
+1. **Connect Your Wallet**: Use any Aptos-compatible wallet to sign in
+2. **Browse Recipes**: Discover creative drink recipes shared by the community
+3. **Share Your Own**: Create and publish your custom Starbucks recipe
+4. **Upvote and Reward**: When you like a recipe, upvote it and the creator receives APT tokens
+5. **Track Performance**: See how your recipes rank on the leaderboard
+6. **Redeem Rewards**: Cash out your earned tokens whenever you want
 
-- React framework
-- shadcn/ui + tailwind for styling
-- Aptos TS SDK
-- Aptos Wallet Adapter
-- Node based Move commands
-- [Next-pwa](https://ducanh-next-pwa.vercel.app/)
+## 💰 Tokenomics
 
-## What Move commands are available?
+- Each upvote sends 0.01 APT (~$0.05) directly to the recipe creator
+- Creators can track their earnings in real-time
+- Build a passive income stream from your most popular recipes
+- Completely transparent reward system powered by Aptos blockchain
 
-The tool utilizes [aptos-cli npm package](https://github.com/aptos-labs/aptos-cli) that lets us run Aptos CLI in a Node environment.
+## 💻 Tech Stack
 
-Some commands are built-in the template and can be ran as a npm script, for example:
+- **Frontend**: Next.js, React, TailwindCSS, shadcn/ui
+- **Blockchain**: Aptos Network
+- **Smart Contracts**: Move programming language
+- **Authentication**: Aptos Wallet Adapter
+- **Development Tools**: TypeScript, Node.js
+- **PWA Support**: Works offline and can be installed on mobile devices
 
-- `npm run move:publish` - a command to publish the Move contract
-- `npm run move:test` - a command to run Move unit tests
-- `npm run move:compile` - a command to compile the Move contract
-- `npm run move:upgrade` - a command to upgrade the Move contract
-- `npm run dev` - a command to run the frontend locally
-- `npm run deploy` - a command to deploy the dapp to Vercel
+## 🛠️ Development Commands
 
-For all other available CLI commands, can run `npx aptos` and see a list of all available commands.
+```bash
+# Run local development server
+pnpm run dev
+
+# Compile the Move contract
+pnpm run move:compile
+
+# Test the Move contract
+pnpm run move:test
+
+# Deploy the Move contract
+pnpm run move:publish
+
+# Upgrade the Move contract
+pnpm run move:upgrade
+
+# Deploy frontend to Vercel
+pnpm run deploy
+```
+
+## 🔮 Future Roadmap
+
+- **Social Features**: Follow creators, comment on recipes
+- **NFT Recipe Cards**: Limited edition recipe collections
+- **Mobile App**: Native mobile applications
+- **Partner Integrations**: Official Starbucks partnerships
+- **Community Governance**: DAO for platform decisions
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues and submit pull requests.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Built with ❤️ using the [Aptos Network](https://aptoslabs.com/)
