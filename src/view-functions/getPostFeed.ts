@@ -25,7 +25,6 @@ export const getPostFeed = async (
         typeArguments: [],
       });
 
-    // The response is an array with a single entry - that entry is an array of PostView objects
     const posts = response[0].map((post: any) => ({
       id: post.id,
       owner: post.owner,

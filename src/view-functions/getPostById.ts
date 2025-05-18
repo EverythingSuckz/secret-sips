@@ -11,7 +11,6 @@ export const getPostById = async (postId: string): Promise<Post | null> => {
         typeArguments: [],
       });
 
-    // Response is an array with the Post object
     const post: Post = response[0] as Post;
       
     return {

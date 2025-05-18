@@ -11,7 +11,6 @@ export const getLeaderboard = async (limit: number = 10): Promise<Post[]> => {
         typeArguments: [],
       });
 
-    // Response is an array with the first element containing the array of posts
     const posts = response[0].map((post: any) => ({
       id: post.id,
       owner: post.owner,

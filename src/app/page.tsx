@@ -1,51 +1,27 @@
 "use client";
 
-import { AccountInfo } from "@/components/AccountInfo";
-import { Header } from "@/components/Header";
-import { RecipeFeed } from "@/components/RecipeFeed";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useWallet } from "@aptos-labs/wallet-adapter-react";
+import { Header } from "@/components/header";
+import { Hero } from "@/components/hero";
+import { Footer } from "@/components/footer";
+import { FeaturedRecipes } from "@/components/featured-recipes";
+import { TopContributors } from "@/components/top-contributors";
 
-function App() {
-  const { connected } = useWallet();
-
+export default function Home() {
   return (
-    <>
+    <main className="min-h-screen bg-white">
       <Header />
-      <div className="container mx-auto pb-16">
-        {connected ? (
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mt-6">
-            <div className="md:col-span-3">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Account Details</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-col gap-4">
-                  <AccountInfo />
-                </CardContent>
-              </Card>
-            </div>
-            <div className="md:col-span-9">
-              <RecipeFeed />
-            </div>
+      <Hero />
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="lg:col-span-2">
+            <FeaturedRecipes />
           </div>
-        ) : (
-          <div className="flex items-center justify-center mt-16">
-            <Card>
-              <CardHeader>
-                <CardTitle>Connect Your Wallet to Get Started</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Connect your wallet to share and upvote Starbucks recipes, earn APT tokens, and participate in the Token Tap community.
-                </p>
-              </CardContent>
-            </Card>
+          <div>
+            <TopContributors />
           </div>
-        )}
+        </div>
       </div>
-    </>
-  );
+      <Footer />
+    </main>
+  )
 }
-
-export default App;
