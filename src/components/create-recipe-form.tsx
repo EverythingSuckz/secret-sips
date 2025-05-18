@@ -14,6 +14,7 @@ import { Coffee, ImageIcon, Loader2, Upload, X, LinkIcon } from "lucide-react"
 import { useWalletClient } from "@thalalabs/surf/hooks"
 import { SECRET_SIPS_ABI } from "@/utils/secret_sips_abi"
 import { aptosClient } from "@/utils/aptosClient"
+import Image from 'next/image'
 
 export function CreateRecipeForm() {
   const router = useRouter()
@@ -303,7 +304,7 @@ export function CreateRecipeForm() {
             ) : previewImage ? (
               // Image Preview
               <div className="relative mt-2 rounded-lg overflow-hidden border border-gray-200">
-                <img 
+                <Image 
                   src={previewImage} 
                   alt="Preview" 
                   className="w-full h-64 object-cover" 

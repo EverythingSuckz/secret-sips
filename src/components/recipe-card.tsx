@@ -8,6 +8,7 @@ import { toast } from "@/components/ui/use-toast"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Post } from "@/view-functions/getPostFeed"
 import { formatDistanceToNow } from "date-fns"
+import Image from 'next/image'
 
 interface RecipeCardProps {
   post: Post
@@ -49,7 +50,7 @@ export function RecipeCard({ post, onUpvote, isOwner, isUpvoted, onRedeem }: Rec
     <Card className="recipe-card group flex flex-col h-full">
       <div className="relative overflow-hidden h-48">
         {post.image_url ? (
-          <img
+          <Image
             src={post.image_url}
             alt={post.title}
             className="object-cover h-full w-full recipe-card-image"

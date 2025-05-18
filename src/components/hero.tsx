@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Coffee, ChevronRight, Wallet } from "lucide-react"
+import { Coffee, ChevronRight } from "lucide-react"
 
 export function Hero() {
   return (

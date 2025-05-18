@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 require("dotenv").config();
 const fs = require("node:fs");
 const cli = require("@aptos-labs/ts-sdk/dist/common/cli/index.js");
